@@ -1,0 +1,280 @@
+/* General Style ------------------------------------------------------------------------------------------------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  background-color: #161616;
+  color: #76a7f8;
+  grid-template:
+    "h h h h" 180px
+    ". m m ." 1fr
+    ". m m ." 1fr
+    "f f f f" 50px /1fr 1fr 1fr 1fr;
+}
+
+header {
+  grid-area: h;
+  display: flex;
+  margin: 20px;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #df84e2;
+  border-radius: 25px;
+}
+
+header h1 {
+  font-size: 3rem;
+  padding: 10px;
+}
+
+nav {
+  width: 30%;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  list-style: none;
+}
+
+nav li {
+  padding: 5px;
+}
+
+nav a {
+  color: #76a7f8;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+nav a:hover {
+  color: #df84e2;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px white;
+}
+
+main {
+  grid-area: m;
+  min-height: 600px;
+}
+
+main h2 {
+  color: #d38406;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+main p {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+main a {
+  font-size: 1.2rem;
+  color: #37b8b7;
+}
+
+footer {
+  grid-area: f;
+  display: flex;
+  margin: 10px 20px 0 20px;
+  font-weight: bold;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #df84e2;
+  border-radius: 25px;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Instructions Style ------------------------------------------------------------------------------------------------------------------- */
+#instructions {
+  padding: 20px;
+  border: 3px solid #df84e2;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+#instructions-header {
+  display: inline-block;
+  width: 90%;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+#instructions-header:hover {
+  cursor: pointer;
+}
+
+#instructions-content,
+#minus {
+  display: none;
+}
+
+#instructions-content p {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+#instructions-content li {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Image Style ------------------------------------------------------------------------------------------------------------------- */
+#image-container {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  border: 3px solid #df84e2;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.cover {
+  background-color: #161616;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Letters Style ------------------------------------------------------------------------------------------------------------------------ */
+#word-container {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 2%;
+  justify-content: space-evenly;
+}
+
+.letter {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
+  border-bottom: 2px solid #37b8b7;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Input Style -------------------------------------------------------------------------------------------------------------------------- */
+#input-container {
+  display: flex;
+  height: 100px;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#input-container label {
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+#input-container input {
+  width: 5%;
+  padding: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #d38406;
+  background-color: #161616;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+#input-container button {
+  padding: 5px;
+  color: #161616;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 2px solid #76a7f8;
+  border-radius: 10px;
+}
+
+#input-container input:invalid {
+  border-color: red;
+  color: red;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Summary Style ----------------------------------------------------------------------------------------------------------------------- */
+#summary-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+#summary-container p,
+span {
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+#summary-container span {
+  color: #d38406;
+  font-weight: bold;
+}
+
+#win-title,
+#loss-title {
+  font-size: 3rem;
+  color: red;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* Form Style --------------------------------------------------------------------------------------------------------------------------- */
+form {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: repeat(5, 100px);
+  justify-items: center;
+  align-items: center;
+}
+
+form input, textarea {
+  font-size: 1.5rem;
+  width: 60%;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+textarea {
+  height: 80px;
+}
+
+form input:invalid {
+  border: 2px solid red;
+}
+
+input[type="submit"] {
+  grid-column: 2/3;
+  width: 30%;
+  color: #161616;
+  border: 2px solid #76a7f8;
+  border-radius: 10px;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------- */

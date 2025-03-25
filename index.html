@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Word Guess</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Guess The Animal</h1>
+      <nav>
+        <ul>
+          <li><a href=".">Home</a></li>
+          <li><a href="./pages/about-us.html">About Us</a></li>
+          <li><a href="./pages/contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="instructions">
+        <svg
+          id="plus"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="none"
+            stroke="#d38406"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 12h6m0 0h6m-6 0v6m0-6V6"
+          />
+        </svg>
+        <svg
+          id="minus"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path fill="#d38406" d="M5 13v-2h14v2H5Z" />
+        </svg>
+        <h2 id="instructions-header">Instructions</h2>
+        <div id="instructions-content">
+          <p>
+            You need to guess the hidden animal in the covered image below!! At
+            the start the image is fully covered and no letters are revealed.
+            The game flows as follow:
+          </p>
+          <ol>
+            <li>Guess a letter (case insensitive).</li>
+            <li>
+              If the word contains the above letter, it'll be permanently
+              displayed at its position, and part of the image will be
+              displayed.
+            </li>
+            <li>
+              If the word does not contains it, then you lose an attempt and
+              part of the image will be displayed to help you.
+            </li>
+            <li>
+              Remember that you have limited attempts!! The goal is to find all
+              the correct letters which form the word of the animal showed in
+              the picture!!
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div id="image-container">
+        <div id="cover-1" class="cover"></div>
+        <div id="cover-2" class="cover"></div>
+        <div id="cover-3" class="cover"></div>
+        <div id="cover-4" class="cover"></div>
+        <div id="cover-5" class="cover"></div>
+        <div id="cover-6" class="cover"></div>
+        <div id="cover-7" class="cover"></div>
+        <div id="cover-8" class="cover"></div>
+        <div id="cover-9" class="cover"></div>
+      </div>
+
+      <div id="word-container"></div>
+
+      <div id="input-container">
+        <label for="input-guess">Guess a single Letter: </label>
+        <input
+          type="text"
+          maxlength="1"
+          pattern="[a-zA-Z]{1}"
+          name="guess"
+          id="input-guess"
+        />
+        <button id="submit-button">Ok</button>
+        <button id="reset-button">Reset</button>
+      </div>
+
+      <div id="summary-container">
+        <p>Used Letters: <span></span></p>
+        <p>Failed Attempts: <span></span></p>
+        <p>Total Attempts: <span></span></p>
+        <p>Max Failed Attempts: <span></span></p>
+      </div>
+    </main>
+
+    <footer>
+      <p>Victor Ferreira Araújo / Student Number: 9006475</p>
+    </footer>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js"></script>
+</html>

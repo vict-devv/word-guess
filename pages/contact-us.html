@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Word Guess</title>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+      <nav>
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Form</h2>
+      <!-- For this project the form does not need to do any further action... -->
+      <form action="">
+        <label for="name">Name: *</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Your name here"
+          tabindex="1"
+          required
+        />
+
+        <label for="email">Email: *</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          pattern="\w+[@]{1}\w+[\.]{1}\w+.?\w*"
+          placeholder="email@email.com"
+          tabindex="2"
+          required
+        />
+
+        <label for="phone">Phone: </label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          pattern="\d{3}-\d{3}-\d{4}"
+          placeholder="000-111-2222"
+          tabindex="3"
+        />
+
+        <label for="message">Message: </label>
+        <textarea
+          name="message"
+          id="message"
+          placeholder="Your message here"
+          tabindex="4"
+        ></textarea>
+
+        <input type="submit" tabindex="5" value="Submit" />
+      </form>
+    </main>
+
+    <footer>
+      <p>Victor Ferreira Araújo / Student Number: 9006475</p>
+    </footer>
+  </body>
+</html>
