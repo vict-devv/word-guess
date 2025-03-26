@@ -76,6 +76,11 @@ const remove_win_loss_titles = () => {
   $("#win-title").remove();
   $("#loss-title").remove();
 };
+
+const update_footer_year = () => {
+  const currYear = new Date().getFullYear();
+  $("footer p span").html(`&copy; ${currYear} - `);
+};
 // -----------------------------------------------------------------------------------------------------------------------------------------
 
 // Core Functions --------------------------------------------------------------------------------------------------------------------------
@@ -294,5 +299,8 @@ $(document).ready(() => {
   populate_word_container();
   init_image_container();
   update_summary_content();
+
+  // This is to fulfill the requirement of having JS on all pages.
+  update_footer_year();
 });
 // -----------------------------------------------------------------------------------------------------------------------------------------

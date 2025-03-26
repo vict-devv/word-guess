@@ -224,7 +224,7 @@ footer {
 }
 
 #summary-container p,
-span {
+#summary-container span {
   padding: 5px;
   font-size: 1.2rem;
 }
